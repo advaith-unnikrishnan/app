@@ -53,61 +53,6 @@ class _MyAppState extends State<MyApp> {
             ),
           ],
         ),
-        /*child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Padding(
-              padding: const EdgeInsets.all(10.0),
-              child: CircleAvatar(
-                backgroundImage: AssetImage('images/human.png'),
-                backgroundColor: Colors.white,
-                radius: 50.0,
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(10.0),
-              child: Text('Username',
-              style: TextStyle(
-                color: Colors.black,
-                fontSize: 30.0,
-              ),),
-            ),
-            Container(
-              height: 40,
-              width: 200,
-              margin: EdgeInsets.all(50.0),
-              color: Colors.grey,
-              child: Text(
-                'Profile',
-                style: TextStyle(fontSize: 30, color: Colors.black),
-                textAlign: TextAlign.center,
-              ),
-            ),
-            Container(
-              height: 40,
-              width: 200,
-              margin: EdgeInsets.all(50.0),
-              color: Colors.grey,
-              child: Text(
-                'Projects',
-                style: TextStyle(fontSize: 30, color: Colors.black),
-                textAlign: TextAlign.center,
-              ),
-            ),
-            Container(
-              height: 40,
-              width: 200,
-              margin: EdgeInsets.all(50.0),
-              color: Colors.grey,
-              child: Text(
-                'About',
-                style: TextStyle(fontSize: 30, color: Colors.black),
-                textAlign: TextAlign.center,
-              ),
-            ),
-          ],
-        ),*/
       ),
       body: ListView(
         scrollDirection: Axis.vertical,
