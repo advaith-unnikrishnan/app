@@ -23,10 +23,56 @@ class _MyAppState extends State<MyApp> {
         elevation: 0.0,
       ),
       endDrawer: Drawer(
-        child: Column(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: <Widget>[
+            DrawerHeader(
+              decoration: BoxDecoration(color: Color(0xFF03DD90)),
+              child: ListTile(
+                    leading: Image(image: AssetImage('images/human.png')),
+                    title:Text(
+                      'Username',
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 30,
+                      ),
+                    ),
+                ),
+              ),
+            ListTile(
+              leading: Icon(Icons.location_on),
+              title: Text('Location'),
+            ),
+            ListTile(
+              leading: Icon(Icons.receipt),
+              title: Text('Previous orders'),
+            ),
+            ListTile(
+              leading: Icon(Icons.settings),
+              title: Text('Settings'),
+            ),
+          ],
+        ),
+        /*child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: CircleAvatar(
+                backgroundImage: AssetImage('images/human.png'),
+                backgroundColor: Colors.white,
+                radius: 50.0,
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Text('Username',
+              style: TextStyle(
+                color: Colors.black,
+                fontSize: 30.0,
+              ),),
+            ),
             Container(
               height: 40,
               width: 200,
@@ -61,15 +107,14 @@ class _MyAppState extends State<MyApp> {
               ),
             ),
           ],
-        ),
+        ),*/
       ),
       body: ListView(
         scrollDirection: Axis.vertical,
         children: <Widget>[
           Padding(
-            padding: const EdgeInsets.fromLTRB(0,0,0,50),
+            padding: const EdgeInsets.all(0),
             child: Container(
-
               child: FittedBox(
                 child: Material(
                     color: Colors.white,
@@ -81,9 +126,8 @@ class _MyAppState extends State<MyApp> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
                           Container(
-                            padding: const EdgeInsets.all(0),
                               width: 411,
-                              height: 450,
+                              height: 731,
                               decoration: BoxDecoration(
                                 color: Color.fromRGBO(255, 255, 255, 1),
                               ),
@@ -160,7 +204,6 @@ class _MyAppState extends State<MyApp> {
                                                                     AssetImage(
                                                               'images/sphere2.png',
                                                             ))),
-
                                                       ]))),
                                         ]))),
 
@@ -267,7 +310,7 @@ class _MyAppState extends State<MyApp> {
                                                     image: DecorationImage(
                                                         image: AssetImage(
                                                             'images/Grocimg.png'),
-                                                        fit: BoxFit.fill),
+                                                        fit: BoxFit.fitWidth),
                                                   ))),
                                           Positioned(
                                               top: 97,
@@ -342,7 +385,7 @@ class _MyAppState extends State<MyApp> {
                                           image: DecorationImage(
                                               image: AssetImage(
                                                   'images/Barber.png'),
-                                              fit: BoxFit.fill),
+                                              fit: BoxFit.fitWidth),
                                         ))),
                                 //pharmacy
                                 Positioned(
@@ -410,7 +453,7 @@ class _MyAppState extends State<MyApp> {
                                                   ))),
                                           Positioned(
                                               top: 101,
-                                              left: 20,
+                                              left: 0,
                                               child: Text(
                                                 'Pharmacy',
                                                 textAlign: TextAlign.center,
@@ -426,199 +469,7 @@ class _MyAppState extends State<MyApp> {
                                                     height: 1),
                                               )),
                                         ]))),
-                              ])),
-
-                         //shop list large Box
-                        Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            mainAxisAlignment: MainAxisAlignment.spaceAround,
-                            children: <Widget>[
-                          Container(
-                              width: 388,
-                              height: 148,
-                                padding:EdgeInsets.fromLTRB(0,10,0,10),
-                              child: Stack(
-                                  children: <Widget>[
-                                    Positioned(
-                                        top: -2,
-                                        left: 0,
-                                        child: Container(
-                                            width: 388,
-                                            height: 148,
-                                            decoration: BoxDecoration(
-                                              borderRadius : BorderRadius.only(
-                                                topLeft: Radius.circular(20),
-                                                topRight: Radius.circular(20),
-                                                bottomLeft: Radius.circular(20),
-                                                bottomRight: Radius.circular(20),
-                                              ),
-                                              color : Color.fromRGBO(196, 196, 196, 1),
-                                              image : DecorationImage(
-                                                  image: AssetImage('images/Saloonimg.png'),
-                                                  fit: BoxFit.fitWidth
-                                              ),
-                                            )
-                                        )
-                                    ),Positioned(
-                                        top: 85,
-                                        left: 9,
-                                        child: Text('Imperial Saloon', textAlign: TextAlign.left, style: TextStyle(
-                                            color: Color.fromRGBO(255, 255, 255, 1),
-                                            fontFamily: 'Roboto',
-                                            fontSize: 30,
-                                            letterSpacing: 0 /*percentages not used in flutter. defaulting to zero*/,
-                                            fontWeight: FontWeight.normal,
-                                            height: 1
-                                        ),)
-                                    ),Positioned(
-                                        top: 99,
-                                        left: 328,
-                                        child: Text('4', textAlign: TextAlign.left, style: TextStyle(
-                                            color: Color.fromRGBO(255, 255, 255, 1),
-                                            fontFamily: 'Roboto',
-                                            fontSize: 30,
-                                            letterSpacing: 0 /*percentages not used in flutter. defaulting to zero*/,
-                                            fontWeight: FontWeight.normal,
-                                            height: 1
-                                        ),)
-                                    ),Positioned(
-                                        top: 103,
-                                        left: 351,
-                                        child: Image(
-                                            image: AssetImage(
-                                              'images/staricon.png',
-                                            ))
-                                    ),
-                                  ]
-                              )
-                          ),
-                          Container(
-                              width: 388,
-                              height: 148,
-                              padding:EdgeInsets.fromLTRB(0,10,0,10),
-
-                              child: Stack(
-                                  children: <Widget>[
-                                    Positioned(
-                                        top: -2,
-                                        left: 0,
-                                        child: Container(
-                                            width: 388,
-                                            height: 148,
-                                            decoration: BoxDecoration(
-                                              borderRadius : BorderRadius.only(
-                                                topLeft: Radius.circular(20),
-                                                topRight: Radius.circular(20),
-                                                bottomLeft: Radius.circular(20),
-                                                bottomRight: Radius.circular(20),
-                                              ),
-                                              color : Color.fromRGBO(196, 196, 196, 1),
-                                              image : DecorationImage(
-                                                  image: AssetImage('images/Grocimg.png'),
-                                                  fit: BoxFit.fitWidth
-                                              ),
-                                            )
-                                        )
-                                    ),Positioned(
-                                        top: 85,
-                                        left: 9,
-                                        child: Text('Supreme store', textAlign: TextAlign.left, style: TextStyle(
-                                            color: Color.fromRGBO(255, 255, 255, 1),
-                                            fontFamily: 'Roboto',
-                                            fontSize: 30,
-                                            letterSpacing: 0 /*percentages not used in flutter. defaulting to zero*/,
-                                            fontWeight: FontWeight.normal,
-                                            height: 1
-                                        ),)
-                                    ),Positioned(
-                                        top: 99,
-                                        left: 328,
-                                        child: Text('3', textAlign: TextAlign.left, style: TextStyle(
-                                            color: Color.fromRGBO(255, 255, 255, 1),
-                                            fontFamily: 'Roboto',
-                                            fontSize: 30,
-                                            letterSpacing: 0 /*percentages not used in flutter. defaulting to zero*/,
-                                            fontWeight: FontWeight.normal,
-                                            height: 1
-                                        ),)
-                                    ),Positioned(
-                                        top: 103,
-                                        left: 351,
-                                        child: Image(
-                                            image: AssetImage(
-                                              'images/staricon.png',
-                                            ))
-                                    ),
-                                  ]
-                              )
-                          ),
-
-                          Container(
-                              width: 388,
-                              height: 148,
-                              padding:EdgeInsets.fromLTRB(0,10,0,10),
-
-                              child: Stack(
-                                  children: <Widget>[
-                                    Positioned(
-                                        top: -2,
-                                        left: 0,
-                                        child: Container(
-                                            width: 388,
-                                            height: 148,
-                                            decoration: BoxDecoration(
-                                              borderRadius : BorderRadius.only(
-                                                topLeft: Radius.circular(20),
-                                                topRight: Radius.circular(20),
-                                                bottomLeft: Radius.circular(20),
-                                                bottomRight: Radius.circular(20),
-                                              ),
-                                              color : Color.fromRGBO(196, 196, 196, 1),
-                                              image : DecorationImage(
-                                                  image: AssetImage('images/Pharmimg.png'),
-                                                  fit: BoxFit.fitWidth
-                                              ),
-                                            )
-                                        )
-                                    ),Positioned(
-                                        top: 85,
-                                        left: 9,
-                                        child: Text('Life Pharmacy', textAlign: TextAlign.left, style: TextStyle(
-                                            color: Color.fromRGBO(255, 255, 255, 1),
-                                            fontFamily: 'Roboto',
-                                            fontSize: 30,
-                                            letterSpacing: 0 /*percentages not used in flutter. defaulting to zero*/,
-                                            fontWeight: FontWeight.normal,
-                                            height: 1
-                                        ),)
-                                    ),Positioned(
-                                        top: 99,
-                                        left: 300,
-                                        child: Text('4.5', textAlign: TextAlign.left, style: TextStyle(
-                                            color: Color.fromRGBO(255, 255, 255, 1),
-                                            fontFamily: 'Roboto',
-                                            fontSize: 30,
-                                            letterSpacing: 0 /*percentages not used in flutter. defaulting to zero*/,
-                                            fontWeight: FontWeight.normal,
-                                            height: 1
-                                        ),)
-                                    ),Positioned(
-                                        top: 103,
-                                        left: 351,
-                                        child: Image(
-                                            image: AssetImage(
-                                              'images/staricon.png',
-                                            ))
-                                    ),
-                                  ]
-                              )
-                          )
-                              ],)
-
-
-
-
-
+                              ]))
                         ])),
               ),
             ),
@@ -627,10 +478,13 @@ class _MyAppState extends State<MyApp> {
       ),
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(icon: Icon(Icons.home) , title:Text('Home')),
-          BottomNavigationBarItem(icon: Icon(Icons.location_on),title: Text('Location')),
-          BottomNavigationBarItem(icon: Icon(Icons.bookmark), title:Text('Bookmark')),
+          BottomNavigationBarItem(icon: Icon(Icons.home), title: Text('Home')),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.location_on), title: Text('Location')),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.notifications), title: Text('Notifications')),
         ],
+        selectedItemColor: Color(0xFF03DD90),
       ),
     );
   }
