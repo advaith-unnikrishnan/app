@@ -1,11 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import "package:flutter/material.dart";
 import 'package:flutter/painting.dart';
+import 'package:lokale/splash.dart';
 
 //import 'package:lokale/splash.dart';
 //import
 void main() => runApp(MaterialApp(
-      home: MyApp(),
+      home: Home(),
     ));
 
 class MyApp extends StatefulWidget {
