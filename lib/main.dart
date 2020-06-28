@@ -17,7 +17,12 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: Drawer(
+      backgroundColor: Color(0xFF03DD90),
+      appBar: AppBar(
+        backgroundColor: Color(0xFF03DD90),
+        elevation: 0.0,
+      ),
+      endDrawer: Drawer(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.center,
@@ -153,14 +158,7 @@ class _MyAppState extends State<MyApp> {
                                                                     AssetImage(
                                                               'images/sphere2.png',
                                                             ))),
-                                                        Positioned(
-                                                          top: 24,
-                                                          left: 365,
-                                                          child: Image(
-                                                            image: AssetImage(
-                                                                'images/menuicon.png'),
-                                                          ),
-                                                        ),
+
                                                       ]))),
                                         ]))),
 
