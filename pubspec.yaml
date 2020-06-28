@@ -67,23 +67,23 @@ flutter:
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
 
-  fonts:
-    - family: Roboto
-      fonts:
-        - asset: assets/fonts/roboto-thin.ttf
-          weight: 100
+  #fonts:
+   # - family: Roboto
+    #  fonts:
+     #   - asset: assets/fonts/roboto-thin.ttf
+      #    weight: 100
 
 
-    - family: CeraPro
-      fonts:
-        - asset: assets/fonts/CeraPro-Black.ttf
-          weight: 900
+   # - family: CeraPro
+    #  fonts:
+   #     - asset: assets/fonts/CeraPro-Black.ttf
+    #      weight: 900
 
 
-    - family: BigNoodleTitling
-      fonts:
-        - asset: assets/fonts/BigNoodleTitling-Regular.ttf
-          weight: 400
+   # - family: BigNoodleTitling
+  #    fonts:
+    #    - asset: assets/fonts/BigNoodleTitling-Regular.ttf
+     #     weight: 400
 
   #
   # For details regarding fonts from package dependencies,

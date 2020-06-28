@@ -42,22 +42,20 @@ class _HomeState extends State<Home> {
       child: Stack(
           children: <Widget>[
             Positioned(
-                top: 423,
-                left: -107,
+                top: 500,
+                left: 0,
                 child: Image(
                     image: AssetImage(
-                      'images/vector.png',
+                      'images/Vector1.png'
 
                     ))
             ),
             Positioned(
-                top: 554,
-                left: -63,
+                top: 630,
+                left: 0,
                 child: Image(
-                    image: AssetImage(
-                      'images/vector1.png',
-
-                    ))
+                    image: AssetImage('images/Vector.png'),
+                )
             ),
             Positioned(
                 top: 221,
