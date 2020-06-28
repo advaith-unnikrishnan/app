@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-//import 'package:splashscreen/main.dart';
 import 'package:lokale/main.dart';
 import 'dart:async';
 
