@@ -426,54 +426,6 @@ class _MyAppState extends State<MyApp> {
                                                     height: 1),
                                               )),
                                         ]))),
-
-                                /*Positioned(
-                                          top: 640.6797485351562,
-                                          left: 0,
-                                          child: Container(
-                                              width: 411,
-                                              height: 90.32022857666016,
-
-                                              /*child: Stack(
-                                                  children: <Widget>[
-                                                    Positioned(
-                                                        top: 0,
-                                                        left: 0,
-                                                        child: Image(
-                                                            image: AssetImage(
-                                                              'images/tab.png',
-
-                                                            ))
-                                                    ),Positioned(
-                                                        top: 42.32025146484375,
-                                                        left: 45,
-                                                        child: Image(
-                                                            image: AssetImage(
-                                                              'images/homeicon.png',
-
-                                                            ))
-                                                    ),Positioned(
-                                                        top: 45.32025146484375,
-                                                        left: 342,
-                                                        child: Image(
-                                                            image: AssetImage(
-                                                              'images/bookmarkicon.png',
-
-                                                            ))
-                                                    ),Positioned(
-                                                        top: 11.32025146484375,
-                                                        left: 183,
-                                                        child: Image(
-                                                            image: AssetImage(
-                                                              'images/gps.png',
-
-                                              ))
-                                      ),
-                                  ]
-                              )*/
-
-                          )
-                      ),*/
                               ]))
                         ])),
               ),
@@ -483,9 +435,9 @@ class _MyAppState extends State<MyApp> {
       ),
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(icon: Icon(Icons.home)),
-          BottomNavigationBarItem(icon: Icon(Icons.location_on)),
-          BottomNavigationBarItem(icon: Icon(Icons.bookmark)),
+          BottomNavigationBarItem(icon: Icon(Icons.home) , title:Text('Home')),
+          BottomNavigationBarItem(icon: Icon(Icons.location_on),title: Text('Location')),
+          BottomNavigationBarItem(icon: Icon(Icons.bookmark), title:Text('mark')),
         ],
       ),
     );
