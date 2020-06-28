@@ -4,7 +4,7 @@ import 'package:flutter/painting.dart';
 import 'package:lokale/splash.dart';
 
 void main() => runApp(MaterialApp(
-      home: MyApp(),
+      home: Home(),
     ));
 
 class MyApp extends StatefulWidget {
