@@ -64,16 +64,11 @@ class _MyAppState extends State<MyApp> {
             ],
           ),
         ),
-        appBar: AppBar(
-          title: Text(
-            'lokale',
-            style: TextStyle(fontSize: 30, color: Colors.white),
-          ),
-          backgroundColor: Colors.greenAccent,
-        ),
+
+
         body: ListView(scrollDirection: Axis.vertical, children: <Widget>[
         Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(0),
         child: Container(
         child: FittedBox(
         child: Material(
@@ -83,7 +78,7 @@ class _MyAppState extends State<MyApp> {
         shadowColor: Color(0x802196f3),
         child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
 
                          Container(
@@ -103,20 +98,7 @@ class _MyAppState extends State<MyApp> {
 
                                             child: Stack(
                                                 children: <Widget>[
-                                                  Positioned(
-                                                      top: 11,
-                                                      left: 15,
-                                                      child: Container(
-                                                          width: 98,
-                                                          height: 144,
-                                                          decoration: BoxDecoration(
-                                                            image : DecorationImage(
-                                                                image: AssetImage('images/Compass1.png'),
-                                                                fit: BoxFit.fitWidth
-                                                            ),
-                                                          )
-                                                      )
-                                                  ),Positioned(
+                                                 Positioned(
                                                       top: 0,
                                                       left: 0,
                                                       child: Container(
@@ -138,7 +120,22 @@ class _MyAppState extends State<MyApp> {
                                                                               colors: [Color.fromRGBO(149, 249, 231, 1),Color.fromRGBO(0, 214, 141, 1)]
                                                                           ),
                                                                         )
+                                                                    ),),
+                                                              Positioned(
+                                                              top: 11,
+                                                              left: 15,
+
+                                                                    child: Container(
+                                                                        width: 98,
+                                                                        height: 144,
+                                                                        decoration: BoxDecoration(
+                                                                          image : DecorationImage(
+                                                                              image: AssetImage('images/Compass1.png'),
+                                                                              fit: BoxFit.fitWidth
+                                                                          ),
+                                                                        )
                                                                     )
+
                                                                 ),Positioned(
                                                                     top: 58,
                                                                     left: 303,
