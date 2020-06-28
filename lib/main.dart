@@ -1,27 +1,37 @@
 import 'package:flutter/cupertino.dart';
 import "package:flutter/material.dart";
 import 'package:flutter/painting.dart';
+import 'package:flutter/services.dart';
+import 'package:lokale/splash.dart';
 
 //import 'package:lokale/splash.dart';
 //import
 void main() => runApp(MaterialApp(
-      home: MyApp(),
+      home: Home(),
     ));
 
 class MyApp extends StatefulWidget {
+  MyApp({Key key}) : super(key: key);
+
   @override
   _MyAppState createState() => _MyAppState();
 }
 
 class _MyAppState extends State<MyApp> {
+  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
+
+  void openDrawer() {
+    _scaffoldKey.currentState.openEndDrawer();
+  }
+
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+        statusBarColor: Color.fromRGBO(0, 214, 141, 1),
+    ));
     return Scaffold(
+      key: _scaffoldKey,
       backgroundColor: Color(0xFF03DD90),
-      appBar: AppBar(
-        backgroundColor: Color(0xFF03DD90),
-        elevation: 0.0,
-      ),
       endDrawer: Drawer(
         child: ListView(
           padding: EdgeInsets.zero,
@@ -190,20 +200,34 @@ class _MyAppState extends State<MyApp> {
                                                                           .fitWidth),
                                                                 ))),
                                                         Positioned(
-                                                            top: 58,
-                                                            left: 303,
-                                                            child: Image(
-                                                              image: AssetImage(
-                                                                  'images/sphere1.png'),
-                                                            )),
+                                                          bottom: 50,
+                                                          right: 20,
+                                                          child: Image(
+                                                            image: AssetImage(
+                                                              'images/sphere1.png',
+                                                            ),),
+                                                        ),
+
                                                         Positioned(
-                                                            top: 11,
-                                                            left: 225,
-                                                            child: Image(
-                                                                image:
-                                                                    AssetImage(
+                                                          bottom: -20,
+                                                          right: 10,
+                                                          child: Image(
+                                                            image: AssetImage(
                                                               'images/sphere2.png',
-                                                            ))),
+                                                            ),),
+                                                        ),
+                                                        Positioned(
+                                                          top: 20,
+                                                          right: 20,
+                                                          child: FlatButton(
+                                                            onPressed: openDrawer,
+                                                            child: Icon(
+                                                              Icons.menu,
+                                                              size: 50,
+                                                              color: Colors.white,
+                                                            ),
+                                                          ),
+                                                        ),
                                                       ]))),
                                         ]))),
 
