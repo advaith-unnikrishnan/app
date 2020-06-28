@@ -27,7 +27,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-        statusBarColor: Color.fromRGBO(0, 214, 141, 1),
+        statusBarColor: Color.fromRGBO(0,214,141,1),
     ));
     return Scaffold(
       key: _scaffoldKey,
