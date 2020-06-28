@@ -51,7 +51,7 @@ class _HomeState extends State<Home> {
                     ))
             ),
             Positioned(
-                top: 630,
+                top: 629,
                 left: 0,
                 child: Image(
                     image: AssetImage('images/Vector.png'),
