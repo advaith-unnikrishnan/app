@@ -16,57 +16,13 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        drawer: Drawer(
-          child: Column(
-
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
 
 
-              Container(
-                height: 40,
-                width: 200,
-                margin: EdgeInsets.all(50.0),
-                color: Colors.grey,
-                child: Text(
-                  'Profile',
-                  style: TextStyle(
-                      fontSize: 30, color: Colors.black),
-                  textAlign: TextAlign.center,
-                ),
-              ),
-              Container(
-                height: 40,
-                width: 200,
-                margin: EdgeInsets.all(50.0),
-                color: Colors.grey,
-                child: Text(
-                  'Projects',
-                  style: TextStyle(
-                      fontSize: 30, color: Colors.black),
-                  textAlign: TextAlign.center,
-                ),
-              ),
-              Container(
-                height: 40,
-                width: 200,
-                margin: EdgeInsets.all(50.0),
-                color: Colors.grey,
-                child: Text(
-                  'About',
-                  style: TextStyle(
-                      fontSize: 30, color: Colors.black),
-                  textAlign: TextAlign.center,
-                ),
-              ),
+        body:
+        Column(
 
-            ],
-          ),
-        ),
+          children: <Widget>[
 
-
-        body: ListView(scrollDirection: Axis.vertical, children: <Widget>[
         Padding(
         padding: const EdgeInsets.all(0),
         child: Container(
@@ -77,13 +33,13 @@ class _MyAppState extends State<MyApp> {
         borderRadius: BorderRadius.circular(24.0),
         shadowColor: Color(0x802196f3),
         child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.end,
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: <Widget>[
 
                          Container(
-                              width: 411,
-                              height: 731,
+                              width: MediaQuery.of(context).size.width * 1,
+                              height: MediaQuery.of(context).size.height * 1,
                               decoration: BoxDecoration(
                                 color : Color.fromRGBO(255, 255, 255, 1),
                               ),
@@ -380,56 +336,59 @@ class _MyAppState extends State<MyApp> {
                                                 ]
                                             )
                                         )
-                                    ),Positioned(
-                                        top: 640.6797485351562,
-                                        left: 0,
-                                        child: Container(
-                                            width: 411,
-                                            height: 90.32022857666016,
-
-                                            child: Stack(
-                                                children: <Widget>[
-                                                  Positioned(
-                                                      top: 0,
-                                                      left: 0,
-                                                      child: Image(
-                                                          image: AssetImage(
-                                                            'images/tab.png',
-
-                                                          ))
-                                                  ),Positioned(
-                                                      top: 42.32025146484375,
-                                                      left: 45,
-                                                      child: Image(
-                                                          image: AssetImage(
-                                                            'images/homeicon.png',
-
-                                                          ))
-                                                  ),Positioned(
-                                                      top: 45.32025146484375,
-                                                      left: 342,
-                                                      child: Image(
-                                                          image: AssetImage(
-                                                            'images/bookmarkicon.png',
-
-                                                          ))
-                                                  ),Positioned(
-                                                      top: 11.32025146484375,
-                                                      left: 183,
-                                                      child: Image(
-                                                          image: AssetImage(
-                                                            'images/gps.png',
-
-                                            ))
                                     ),
-                                  ]
-                              )
-                          )
-                      ),
                     ]
                 )
-                    )])
-    ))))]));}
+
+                    )
+
+            ])
+    )))),
+         Align(
+        alignment: Alignment.bottomCenter,
+        child: Container(
+            width: 411,
+            height: 50,
+
+            child: Stack(
+                children: <Widget>[
+                  Positioned(
+
+                      child: Image(
+                          image: AssetImage(
+                            'images/tab.png',
+
+                          ))
+                  ),Positioned(
+
+                      left: 45,
+                      child: Image(
+                          image: AssetImage(
+                            'images/homeicon.png',
+
+                          ))
+                  ),Positioned(
+
+                      left: 342,
+                      child: Image(
+                          image: AssetImage(
+                            'images/bookmarkicon.png',
+
+                          ))
+                  ),Positioned(
+
+                      left: 183,
+                      child: Image(
+                          image: AssetImage(
+                            'images/gps.png',
+
+                          ))
+                  ),
+                ]
+            )
+        )
+    ),],),);
+  }
 }
 
 
