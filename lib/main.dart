@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import "package:flutter/material.dart";
 import 'package:flutter/painting.dart';
 import 'package:flutter/services.dart';
+import 'package:lokale/shop.dart';
 import 'package:lokale/splash.dart';
 
 //import 'package:lokale/splash.dart';
@@ -552,6 +553,12 @@ class _MyAppState extends State<MyApp> {
                                             child: Container(
                                                 width: 388,
                                                 height: 148,
+                                                child: InkWell(
+                                                    onTap: () {
+                                                      Navigator.push(context,
+                                                          MaterialPageRoute(builder: (context)=>ImperialsaloonWidget())
+                                                      );
+                                                    }),
                                                 decoration: BoxDecoration(
                                                   borderRadius : BorderRadius.only(
                                                     topLeft: Radius.circular(20),
@@ -612,6 +619,12 @@ class _MyAppState extends State<MyApp> {
                                             child: Container(
                                                 width: 388,
                                                 height: 148,
+                                                child: InkWell(
+                                                    onTap: () {
+                                                      Navigator.push(context,
+                                                          MaterialPageRoute(builder: (context)=>SupremestoreWidget())
+                                                      );
+                                                    }),
                                                 decoration: BoxDecoration(
                                                   borderRadius : BorderRadius.only(
                                                     topLeft: Radius.circular(20),
@@ -673,6 +686,12 @@ class _MyAppState extends State<MyApp> {
                                             child: Container(
                                                 width: 388,
                                                 height: 148,
+                                                child: InkWell(
+                                                    onTap: () {
+                                                      Navigator.push(context,
+                                                          MaterialPageRoute(builder: (context)=>LifePharmacyWidget())
+                                                      );
+                                                    }),
                                                 decoration: BoxDecoration(
                                                   borderRadius : BorderRadius.only(
                                                     topLeft: Radius.circular(20),
