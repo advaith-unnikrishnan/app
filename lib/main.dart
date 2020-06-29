@@ -3,11 +3,9 @@ import "package:flutter/material.dart";
 import 'package:flutter/painting.dart';
 import 'package:flutter/services.dart';
 import 'package:lokale/location.dart';
+import 'package:lokale/notifications.dart';
 import 'package:lokale/shop.dart';
 import 'package:lokale/splash.dart';
-
-//import 'package:lokale/splash.dart';
-//import
 void main() => runApp(MaterialApp(
       home: Home(),
     ));
@@ -44,6 +42,17 @@ class _MyAppState extends State<MyApp> {
     super.dispose();
   }
   //search box focus end
+
+  void _itemTapped(int index){
+    if(index==1)
+      {
+        Navigator.push(context,MaterialPageRoute(builder: (context)=> Location()));
+      }
+    else if(index==2)
+      {
+        Navigator.push(context,MaterialPageRoute(builder: (context)=> NotificationsBar()));
+      }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -768,6 +777,7 @@ class _MyAppState extends State<MyApp> {
               icon: Icon(Icons.notifications), title: Text('Notifications')),
         ],
         selectedItemColor: Color(0xFF03DD90),
+        onTap: _itemTapped,
       ),
     );
   }

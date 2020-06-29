@@ -1,6 +1,6 @@
 import "package:flutter/material.dart";
 import 'package:lokale/main.dart';
-import 'package:lokale/splash.dart';
+
 
 
 void main() => runApp(MaterialApp(
@@ -132,14 +132,7 @@ class _LocationState extends State<Location> {
                 ),
               ),
 
-              FlatButton(
-                onPressed: openDrawer,
-                child: Icon(
-                  Icons.menu,
-                  size: 45,
-                  color: Colors.white,
-                ),
-              ),
+
             ],
           ),
         ),
