@@ -14,7 +14,7 @@ class SupremestoreWidget extends StatefulWidget {
 class _SupremestoreWidgetState extends State<SupremestoreWidget> {
   @override
   Widget build(BuildContext context) {
-    //  SupremestoreWidget page
+    //  SupremestoreWidget page....
 
     return Container(
         width: 411,
