@@ -23,7 +23,22 @@ class _MyAppState extends State<MyApp> {
   void openDrawer() {
     _scaffoldKey.currentState.openEndDrawer();
   }
+  FocusNode myFocusNode;
 
+  @override
+  void initState() {
+    super.initState();
+
+    myFocusNode = FocusNode();
+  }
+
+  @override
+  void dispose() {
+    // Clean up the focus node when the Form is disposed.
+    myFocusNode.dispose();
+
+    super.dispose();
+  }
   @override
   Widget build(BuildContext context) {
     SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
@@ -245,8 +260,10 @@ class _MyAppState extends State<MyApp> {
                                               child: Container(
                                                   width: 283,
                                                   height: 45,
+
                                                   child: new TextField(
-                                                    autofocus: true,
+                                                    focusNode: myFocusNode,
+
                                                     decoration: InputDecoration(
                                                         border: OutlineInputBorder(
                                                           borderRadius:
@@ -289,6 +306,7 @@ class _MyAppState extends State<MyApp> {
                                           Positioned(
                                               top: 13,
                                               left: 17,
+
                                               child: Image(
                                                   image: AssetImage(
                                                 'images/searchicon.png',
