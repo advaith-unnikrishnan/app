@@ -53,7 +53,7 @@ class _MyAppState extends State<MyApp> {
     ));
     return Scaffold(
       key: _scaffoldKey,
-      backgroundColor: Color(0xFF03DD90),
+      //backgroundColor: Color(0xFF03DD90),
       endDrawer: Drawer(
         child: ListView(
           padding: EdgeInsets.zero,
