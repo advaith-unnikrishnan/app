@@ -19,6 +19,7 @@ class _NotificationsBarState extends State<NotificationsBar> {
         padding: EdgeInsets.all(0),
         children: <Widget>[
           ListTile(
+            leading: Icon(Icons.arrow_right),
             title: Text('Crowd at Saloon is low',
               style:TextStyle(
                 fontSize: 15.0,
@@ -27,6 +28,7 @@ class _NotificationsBarState extends State<NotificationsBar> {
             ),
           ),
           ListTile(
+            leading: Icon(Icons.arrow_right),
             title: Text('Your order is ready at Supreme store.',
               style:TextStyle(
                 fontSize: 15.0,
