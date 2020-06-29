@@ -3,9 +3,7 @@ import "package:flutter/material.dart";
 import 'package:flutter/painting.dart';
 import 'package:flutter/services.dart';
 import 'package:lokale/splash.dart';
-
-//import 'package:lokale/splash.dart';
-//import
+import 'package:lokale/notifications.dart';
 void main() => runApp(MaterialApp(
       home: Home(),
     ));
@@ -43,6 +41,11 @@ class _MyAppState extends State<MyApp> {
   }
   //search box focus end
 
+  void _onItemTapped(int index){
+    if(index==2){
+      Navigator.push(context, MaterialPageRoute(builder: (context) => NotificationsBar()));
+    }
+  }
   @override
   Widget build(BuildContext context) {
     SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
@@ -678,13 +681,21 @@ class _MyAppState extends State<MyApp> {
       ),
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(icon: Icon(Icons.home), title: Text('Home')),
           BottomNavigationBarItem(
-              icon: Icon(Icons.location_on), title: Text('Location')),
+              icon: Icon(Icons.home),
+              title: Text('Home'),
+          ),
           BottomNavigationBarItem(
-              icon: Icon(Icons.notifications), title: Text('Notifications')),
+              icon: Icon(Icons.location_on),
+              title: Text('Location'),
+          ),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.notifications),
+              title: Text('Notifications')
+          ),
         ],
         selectedItemColor: Color(0xFF03DD90),
+        onTap: _onItemTapped,
       ),
     );
   }
