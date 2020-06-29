@@ -7,8 +7,8 @@ import 'package:lokale/notifications.dart';
 import 'package:lokale/shop.dart';
 import 'package:lokale/splash.dart';
 void main() => runApp(MaterialApp(
-      home: Home(),
-    ));
+  home: Home(),
+));
 
 class MyApp extends StatefulWidget {
   MyApp({Key key}) : super(key: key);
@@ -45,19 +45,19 @@ class _MyAppState extends State<MyApp> {
 
   void _itemTapped(int index){
     if(index==1)
-      {
-        Navigator.push(context,MaterialPageRoute(builder: (context)=> Location()));
-      }
+    {
+      Navigator.push(context,MaterialPageRoute(builder: (context)=> Location()));
+    }
     else if(index==2)
-      {
-        Navigator.push(context,MaterialPageRoute(builder: (context)=> NotificationsBar()));
-      }
+    {
+      Navigator.push(context,MaterialPageRoute(builder: (context)=> NotificationsBar()));
+    }
   }
 
   @override
   Widget build(BuildContext context) {
     SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-        statusBarColor: Color.fromRGBO(0,214,141,1),
+      statusBarColor: Color.fromRGBO(0,214,141,1),
     ));
     return Scaffold(
       key: _scaffoldKey,
@@ -69,16 +69,16 @@ class _MyAppState extends State<MyApp> {
             DrawerHeader(
               decoration: BoxDecoration(color: Color(0xFF03DD90)),
               child: ListTile(
-                    leading: Image(image: AssetImage('images/human.png')),
-                    title:Text(
-                      'Username',
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 30,
-                      ),
-                    ),
+                leading: Image(image: AssetImage('images/human.png')),
+                title:Text(
+                  'Username',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 30,
+                  ),
                 ),
               ),
+            ),
             ListTile(
               leading: Icon(Icons.home),
               title: Text('Home'),
@@ -202,12 +202,12 @@ class _MyAppState extends State<MyApp> {
                                                               width: 411,
                                                               height: 193,
                                                               decoration:
-                                                                  BoxDecoration(
+                                                              BoxDecoration(
                                                                 gradient: LinearGradient(
                                                                     begin:
-                                                                        Alignment(
-                                                                            1,
-                                                                            0),
+                                                                    Alignment(
+                                                                        1,
+                                                                        0),
                                                                     end: Alignment(0, 1),
                                                                     colors: [
                                                                       Color.fromRGBO(
@@ -230,7 +230,7 @@ class _MyAppState extends State<MyApp> {
                                                                 width: 98,
                                                                 height: 144,
                                                                 decoration:
-                                                                    BoxDecoration(
+                                                                BoxDecoration(
                                                                   image: DecorationImage(
                                                                       image: AssetImage(
                                                                           'images/Compass1.png'),
@@ -288,30 +288,30 @@ class _MyAppState extends State<MyApp> {
                                                     focusNode: myFocusNode,
 
                                                     decoration: InputDecoration(
-                                                        border: OutlineInputBorder(
-                                                          borderRadius:
-                                                          BorderRadius.circular(30),
-                                                          borderSide: BorderSide(
-                                                            color: Colors.blueAccent,
-                                                            style: BorderStyle.solid,
-                                                          ),
+                                                      border: OutlineInputBorder(
+                                                        borderRadius:
+                                                        BorderRadius.circular(30),
+                                                        borderSide: BorderSide(
+                                                          color: Colors.blueAccent,
+                                                          style: BorderStyle.solid,
                                                         ),
-                                                        hintText: 'Search for'
-                                                            ' shops',
+                                                      ),
+                                                      hintText: 'Search for'
+                                                          ' shops',
                                                     ),
                                                     textAlign: TextAlign.center,
                                                   ),
                                                   decoration: BoxDecoration(
                                                     borderRadius:
-                                                        BorderRadius.only(
+                                                    BorderRadius.only(
                                                       topLeft:
-                                                          Radius.circular(30),
+                                                      Radius.circular(30),
                                                       topRight:
-                                                          Radius.circular(30),
+                                                      Radius.circular(30),
                                                       bottomLeft:
-                                                          Radius.circular(30),
+                                                      Radius.circular(30),
                                                       bottomRight:
-                                                          Radius.circular(30),
+                                                      Radius.circular(30),
                                                     ),
                                                     boxShadow: [
                                                       BoxShadow(
@@ -332,8 +332,8 @@ class _MyAppState extends State<MyApp> {
 
                                               child: Image(
                                                   image: AssetImage(
-                                                'images/searchicon.png',
-                                              ))),
+                                                    'images/searchicon.png',
+                                                  ))),
 //                                          Positioned(
 //                                              top: 15,
 //                                              left: 43,
@@ -368,15 +368,15 @@ class _MyAppState extends State<MyApp> {
                                                   height: 134,
                                                   decoration: BoxDecoration(
                                                     borderRadius:
-                                                        BorderRadius.only(
+                                                    BorderRadius.only(
                                                       topLeft:
-                                                          Radius.circular(15),
+                                                      Radius.circular(15),
                                                       topRight:
-                                                          Radius.circular(15),
+                                                      Radius.circular(15),
                                                       bottomLeft:
-                                                          Radius.circular(15),
+                                                      Radius.circular(15),
                                                       bottomRight:
-                                                          Radius.circular(15),
+                                                      Radius.circular(15),
                                                     ),
                                                     boxShadow: [
                                                       BoxShadow(
@@ -390,7 +390,7 @@ class _MyAppState extends State<MyApp> {
                                                     image: DecorationImage(
                                                         image: AssetImage(
                                                             'images/Grocimg.png'),
-                                                        fit: BoxFit.fitWidth),
+                                                        fit: BoxFit.fill),
                                                   ))),
                                           Positioned(
                                               top: 97,
@@ -400,15 +400,15 @@ class _MyAppState extends State<MyApp> {
                                                   height: 38,
                                                   decoration: BoxDecoration(
                                                     borderRadius:
-                                                        BorderRadius.only(
+                                                    BorderRadius.only(
                                                       topLeft:
-                                                          Radius.circular(10),
+                                                      Radius.circular(10),
                                                       topRight:
-                                                          Radius.circular(10),
+                                                      Radius.circular(10),
                                                       bottomLeft:
-                                                          Radius.circular(10),
+                                                      Radius.circular(10),
                                                       bottomRight:
-                                                          Radius.circular(10),
+                                                      Radius.circular(10),
                                                     ),
                                                     color: Color.fromRGBO(
                                                         196,
@@ -428,9 +428,9 @@ class _MyAppState extends State<MyApp> {
                                                     fontFamily: 'Cera Pro',
                                                     fontSize: 25,
                                                     letterSpacing:
-                                                        0 /*percentages not used in flutter. defaulting to zero*/,
+                                                    0 /*percentages not used in flutter. defaulting to zero*/,
                                                     fontWeight:
-                                                        FontWeight.normal,
+                                                    FontWeight.normal,
                                                     height: 1),
                                               )),
                                         ]))),
@@ -461,11 +461,11 @@ class _MyAppState extends State<MyApp> {
                                                 blurRadius: 10)
                                           ],
                                           color:
-                                              Color.fromRGBO(255, 255, 255, 1),
+                                          Color.fromRGBO(255, 255, 255, 1),
                                           image: DecorationImage(
                                               image: AssetImage(
                                                   'images/Barber.png'),
-                                              fit: BoxFit.fitWidth),
+                                              fit: BoxFit.fill),
                                         ))),
                                 //pharmacy
                                 Positioned(
@@ -483,15 +483,15 @@ class _MyAppState extends State<MyApp> {
                                                   height: 134,
                                                   decoration: BoxDecoration(
                                                     borderRadius:
-                                                        BorderRadius.only(
+                                                    BorderRadius.only(
                                                       topLeft:
-                                                          Radius.circular(15),
+                                                      Radius.circular(15),
                                                       topRight:
-                                                          Radius.circular(15),
+                                                      Radius.circular(15),
                                                       bottomLeft:
-                                                          Radius.circular(15),
+                                                      Radius.circular(15),
                                                       bottomRight:
-                                                          Radius.circular(15),
+                                                      Radius.circular(15),
                                                     ),
                                                     boxShadow: [
                                                       BoxShadow(
@@ -505,7 +505,7 @@ class _MyAppState extends State<MyApp> {
                                                     image: DecorationImage(
                                                         image: AssetImage(
                                                             'images/Pharmimg.png'),
-                                                        fit: BoxFit.fitWidth),
+                                                        fit: BoxFit.fill),
                                                   ))),
                                           Positioned(
                                               top: 96,
@@ -515,15 +515,15 @@ class _MyAppState extends State<MyApp> {
                                                   height: 38,
                                                   decoration: BoxDecoration(
                                                     borderRadius:
-                                                        BorderRadius.only(
+                                                    BorderRadius.only(
                                                       topLeft:
-                                                          Radius.circular(10),
+                                                      Radius.circular(10),
                                                       topRight:
-                                                          Radius.circular(10),
+                                                      Radius.circular(10),
                                                       bottomLeft:
-                                                          Radius.circular(10),
+                                                      Radius.circular(10),
                                                       bottomRight:
-                                                          Radius.circular(10),
+                                                      Radius.circular(10),
                                                     ),
                                                     color: Color.fromRGBO(
                                                         196,
@@ -533,7 +533,7 @@ class _MyAppState extends State<MyApp> {
                                                   ))),
                                           Positioned(
                                               top: 101,
-                                              left: 0,
+                                              left: 10,
                                               child: Text(
                                                 'Pharmacy',
                                                 textAlign: TextAlign.center,
@@ -543,9 +543,9 @@ class _MyAppState extends State<MyApp> {
                                                     fontFamily: 'Cera Pro',
                                                     fontSize: 25,
                                                     letterSpacing:
-                                                        0 /*percentages not used in flutter. defaulting to zero*/,
+                                                    0 /*percentages not used in flutter. defaulting to zero*/,
                                                     fontWeight:
-                                                        FontWeight.normal,
+                                                    FontWeight.normal,
                                                     height: 1),
                                               )),
                                         ]))),
@@ -554,7 +554,7 @@ class _MyAppState extends State<MyApp> {
 
 
 
-                        //shop list large boxes
+                          //shop list large boxes
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             mainAxisAlignment: MainAxisAlignment.spaceAround,

@@ -14,7 +14,8 @@ class _SupremestoreWidgetState extends State<SupremestoreWidget> {
   Widget build(BuildContext context) {
     //  SupremestoreWidget page....
 
-    return Container(
+    return
+      Container(
         width: 411,
         height: 731,
         decoration: BoxDecoration(
@@ -436,6 +437,7 @@ class _SupremestoreWidgetState extends State<SupremestoreWidget> {
             ]
         )
     );
+
   }
 }
 

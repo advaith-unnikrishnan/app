@@ -38,6 +38,23 @@ class _NotificationsBarState extends State<NotificationsBar> {
           )
         ],
       ),
+      bottomNavigationBar: BottomNavigationBar(
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(icon: Icon(Icons.home), title: Text('Home')),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.location_on), title: Text('Location')),
+          BottomNavigationBarItem(
+
+            icon: Icon(Icons.notifications), title: Text('Notifications'),
+
+
+          ),
+
+        ],
+        selectedItemColor: Color(0xFF03DD90),
+      ),
+
+
     );
   }
 }
