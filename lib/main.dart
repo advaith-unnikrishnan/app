@@ -686,7 +686,7 @@ class _MyAppState extends State<MyApp> {
                                                       fit: BoxFit.fitWidth
                                                   ),
                                                 )
-                                            )
+                                            )//
                                         ),Positioned(
                                             top: 85,
                                             left: 9,
