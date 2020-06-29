@@ -23,6 +23,8 @@ class _MyAppState extends State<MyApp> {
   void openDrawer() {
     _scaffoldKey.currentState.openEndDrawer();
   }
+
+  //search box focus start
   FocusNode myFocusNode;
 
   @override
@@ -39,6 +41,8 @@ class _MyAppState extends State<MyApp> {
 
     super.dispose();
   }
+  //search box focus end
+
   @override
   Widget build(BuildContext context) {
     SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
