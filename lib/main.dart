@@ -245,6 +245,22 @@ class _MyAppState extends State<MyApp> {
                                               child: Container(
                                                   width: 283,
                                                   height: 45,
+                                                  child: new TextField(
+                                                    autofocus: true,
+                                                    decoration: InputDecoration(
+                                                        border: OutlineInputBorder(
+                                                          borderRadius:
+                                                          BorderRadius.circular(30),
+                                                          borderSide: BorderSide(
+                                                            color: Colors.blueAccent,
+                                                            style: BorderStyle.solid,
+                                                          ),
+                                                        ),
+                                                        hintText: 'Search for'
+                                                            ' shops',
+                                                    ),
+                                                    textAlign: TextAlign.center,
+                                                  ),
                                                   decoration: BoxDecoration(
                                                     borderRadius:
                                                         BorderRadius.only(
@@ -277,23 +293,22 @@ class _MyAppState extends State<MyApp> {
                                                   image: AssetImage(
                                                 'images/searchicon.png',
                                               ))),
-                                          Positioned(
-                                              top: 15,
-                                              left: 43,
-                                              child: Text(
-                                                'Search for Shops',
-                                                textAlign: TextAlign.left,
-                                                style: TextStyle(
-                                                    color: Color.fromRGBO(
-                                                        0, 0, 0, 0.5),
-                                                    //fontFamily: 'Roboto',
-                                                    fontSize: 14,
-                                                    letterSpacing:
-                                                        0 /*percentages not used in flutter. defaulting to zero*/,
-                                                    fontWeight:
-                                                        FontWeight.normal,
-                                                    height: 1),
-                                              )),
+//                                          Positioned(
+//                                              top: 15,
+//                                              left: 43,
+//                                              child: new TextField(
+//                                                decoration: InputDecoration(
+//                                                  border: OutlineInputBorder(
+//                                                    borderRadius:
+//                                                    BorderRadius.circular(30),
+//                                                    borderSide: BorderSide(
+//                                                      color: Colors.blueAccent,
+//                                                      style: BorderStyle.solid,
+//                                                    ),
+//                                                  ),
+//                                                  hintText: 'Search for shops'
+//                                                ),
+//                                              )),
                                         ]))),
 
                                 //Grocery
